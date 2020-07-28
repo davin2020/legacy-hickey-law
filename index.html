@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hickey Law Website</title>
+    
+    <!-- HTML content file for Hickey Law website - Patricia Hayden - Jan 2012 - TEMPLATE -->
+    <link rel="stylesheet" type="text/css" href="hickey-style-template.css">
+    <link rel="stylesheet" type="text/css" href="hl_round_menu.css">
+
+</head>
+
+
+<body>
+<div id="wrapper">
+
+  <!-- Header incl header logo and phone number -->
+    <div id="header" class="border_pink">
+        <div id="header_title">
+            <!-- old <img id="header_logo" src="images\hickey_logo.jpg" width="200" height="67">-->
+            <img id="header_logo" src="images\hickeylaw_logo.png" width="204" height="72">
+            <!-- ISSUE - still needs drop-shadow as part of 'home' graphic         
+            <h1 class="color_blue">home</h1>
+            -->
+            <h1><img id="home1" src="images\Home-Head-Blue.png" alt="Home Page" width="186" height="28"></h1>
+            
+        </div>
+        <div id="header_phone">	
+            <p class="p_phone fone_bigger">Tel 09 477 0333</p>
+        </div>
+    </div>
+    
+    <!-- NEW NAVIGATION MENU with new CSS hl_round_menu.css -->
+    <div id="menu_nav">
+    <ul id="menu2">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a>
+            
+        </li>
+        <li><a href="services.html">Services</a>
+            <ul>
+                <li><a href="#">Disputes</a></li>
+                <li><a href="#">Family</a></li>
+                <li><a href="#">Criminal</a></li>
+                <li><a href="#">Leaky Buildings</a></li>
+                <li><a href="#">Commercial</a></li>
+                <li><a href="#">Property & Conveyancing</a></li>
+            </ul>
+        </li>
+        <li><a href="#">News</a> 
+        	<ul>
+                <li><a href="#">News Item A</a></li>
+                <li><a href="#">News Item B</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+    </div>
+    <!-- END OF NEW NAVIGATION MENU -->
+
+    <!-- Original Photo Banner area -->
+    <!--
+    <div id="photo_banner">
+        <img id="fade_imgs" src="images\pic1.jpg" alt="Clouds" width="800" height="200">
+    </div>
+    -->
+    
+    <!-- Photo Banner area > NEW jQuery cycler instead 24Jan13 -->
+    <div id="cycler">
+    	<!-- image order is: plain mountain > outcome focussed > plain mountain > plain clouds > oustanding comms > plain clouds > repeat -->
+		<img class="active" src="images/Panarama-rangitoto.png" alt="" title="" width="800" height="200" />
+		<img src="images/Panarama-Outcome-focussed3.png" alt="" title="" width="800" height="200"  />
+		<img src="images/Panarama-rangitoto.png" alt="" title="" width="800" height="200"  />
+		<img src="images/Panarama-yatchs.png" alt="" title="" width="800" height="200"  />	
+        <img src="images/Panarama-Outstanding-Coms3.png" alt="" title="" width="800" height="200"  />
+		<img src="images/Panarama-yatchs.png" alt="" title="" width="800" height="200"  />	
+	</div>
+    
+	<!-- Content Area - incl Secondary Links area, Main Content area on left and Right Content area on right -->
+    <div id="body_content">
+    <div class="hl_swish_logo" id="extra_padding_bottom">
+    
+        <div id="quick_links"> <!--class="border_pink"--> <!-- better layout option would be to decrease top margin/padding here, ie keep it the same as the other pages -->
+            <p class="p_quick_links">
+            	<a href="#">Leaky building?</a> &nbsp &nbsp &nbsp &nbsp
+                <a href="#">Building problem?</a> &nbsp &nbsp &nbsp &nbsp
+                <a href="#">Relationship property issue?</a> &nbsp &nbsp &nbsp &nbsp
+                <a href="#">Lease dispute?</a> &nbsp &nbsp &nbsp &nbsp
+                <a href="#">Will grievance?</a> &nbsp &nbsp &nbsp
+            </p>
+        </div>
+        
+        <!-- need a bit more white space between these 2 divs-->
+        <div id="content_main" class="border_grey">
+            
+            <h2>Got a problem? Then talk with us</h2>
+            <div class="hr_orange"></div> 
+                <p class="p_main">John Hickey can call on over 25 years experience in legal practise, including over 21 years as a sole practitioner.
+                <br> So you know you can call on him!</p>
+            
+            <h2>A lawyer with personality </h2>
+            <div class="hr_orange"></div>
+            <!--<img src="images\orange.jpg" width="100%" height="1" vspace="0" style="margin-top:-20px;">-->
+                <p class="p_main">John has a life outside work too. Evidence his passion for Land Rovers, as well as being father to four daughters. The cynical would suggest he comes to work to get a word in, but thats just legend...</p>
+            
+            <h2>Problem solving lawyer for North Shore Auckland</h2> 
+            <div class="hr_orange"></div>
+                <p class="p_main">Based in Constellation Drive, with easy off street parking, Hickey Law offers legal expertise in Litigation, Conveyancing and Property Law, Commerical and Company matters, Crimilan (Police), Employment, family, Insolvency and Debt Collection, Trafic, Relationship Property Wills Estates, Consumer and Elder Law. See more in Services.</p>
+                <p class="p_main">We would love to talk with you to see if we can help you. So call us now!</p>
+          
+        </div>
+        <div id="content_right" class="border_grey">
+        
+            <!--<img src="images\_new\talk_20.gif" alt="20 minute free consultation" width="121" height="147">-->
+            <div class="quote_img_big">
+            	<p class="p_quote_img_big_20">20</p>
+           	  	<p class="p_quote_img">minute free consultation</p>
+                <p class="p_quote_read_more"><a href="">read more</a></p>
+            </div>
+            
+            <div class="quote_img_small">
+            	<p class="p_quote_img">What our clients say about us</p>
+                <p class="p_quote_read_more"><a href="">read more</a></p>
+            </div>
+            
+            <!-- need to review pics with brett as have tiny lines around their edges when saved as transparent gifs-->
+        </div>
+
+    </div> <!-- end of body_content -->
+	</div> <!-- end of hl_swish_logo -->
+
+	<!-- Footer Area - incl address and footer links -->
+    <div id="footer" class="border_orange">
+        <p class="p_footer color_blue">HickeyLaw  &nbsp &nbsp 
+            33c Constellation Drive  &nbsp &nbsp   
+            North Shore Mail Centre  &nbsp &nbsp   
+            Auckland 0745  &nbsp &nbsp   
+            New Zealand
+        </p>
+        <p class="p_footer color_gold">
+            <a href=#>Client Info</a> &nbsp &nbsp  | &nbsp &nbsp   
+            <a href=#>Privacy policy</a> &nbsp  &nbsp  | &nbsp  &nbsp   
+            <a href=#>Disclaimer</a>  &nbsp &nbsp  | &nbsp &nbsp    
+            <a href=#>Sitemap</a>
+        </p>    
+    </div>
+
+</div> <!-- end of wrapper -->
+</body>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <!-- Javascript & jQuery for doing image fade -->
+	<script type="text/javascript">
+    
+    function cycleImages(){
+          var $active = $('#cycler .active'); //makes $active equal to css id/class
+          var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
+                $next.fadeIn(1000,function(){ //fade IN next image after currently-active one?
+                    $next.delay(800);
+                });
+          $active.fadeOut(1500,function(){//fade OUT the top image
+                $active.css('z-index',1).removeClass('active');//reset the z-index and unhide the image
+                $next.delay(500).fadeIn(1500,function(){//pause 0.5s, fade the next image IN
+                    $(this).addClass('active');//and when the fade's complete add the active class
+                });
+          });
+        }
+    
+    $(window).load(function(){
+        $('.active').fadeIn(1500);//fade in when everything's loaded
+        // run (ie call function) every 7s
+        setInterval('cycleImages()', 7000);
+    })
+    
+    </script>
+    <!-- eof Javascript -->
+    
+</html>
+

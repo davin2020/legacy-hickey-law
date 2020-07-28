@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+body {   
+  background-color:#DDFFFF; - v pale blue 
+}
+
+div * {
+	border:0px solid yellow;
+}
+*/
+
+/* set to full height/width that u want bkg picture to appear at */
+/*
+div.containerB {
+	/*background: url('blue-bkg.jpg'); 
+	background: url('lightblue_bkg.jpg');
+	width: 800px;/* image is now stretched 
+	height: 683px;
+	border: black 1px solid;
+	position:absolute;
+	//margin-left:20px;
+}
+*/
+
+div#menu_nav {
+	z-index:100; /* menu MUST be on top of everything else, including rotating images */
+	position:relative; /*  z-index will only work on an element whose position property has been explicitly set to absolute, fixed, or relative. */
+	width:100%;
+	height:47px;
+	clear:both;
+	border: 0px solid black;
+}
+
+#menu_nav ul { /* this padding is being inherited by the 2nd ul */
+	z-index:1;
+    /*font-family: Verdana, arial, sans-serif;*/
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
+    font-size: 14px; /* was 16*/
+    margin: 0; /* need these otherwise it looks funny - why? */
+    padding: 0;
+    list-style: none;
+	padding-top:15px; /* 20px also looks good */
+    padding-bottom:5px; /* remember to use paddingn and not margin here! */
+	/*margin-top:20px;
+	margin-bottom:0px;*/
+	/*position: relative;
+    display: block; */
+}
+
+#menu_nav ul li {
+    display: block;
+    position: relative;
+    float: left;
+	/* used to add a little whitespace between each horizontal list item - but if using margin-left, then sub-menu gets pushed out to the right too much and not sure how to change it */
+	margin-left:10px; /* this is also applying 10px margin to sub-menu */
+}
+
+/* hide sub-menu by default >> SUDDENLY MAKE SUB MENUS DISAPPEAR */
+#menu_nav li ul {
+    display: none;
+	padding:0px; /* must specify 0 padding here, otherwise padding values are inherited from parent and big gap forms between parent and first child */
+}
+
+/* top level menu formatting */
+#menu_nav ul li a { 
+    display: block;
+    text-decoration: none;
+    color: white;
+	/*    border-top: 1px solid white; */
+    padding: 2px 5px 2px 5px; /* use padding to space out list items, so that u dont have to specify a width for sub-list items - DONT use margin spacing here */
+    /* background: steelblue; - dont show bkg rounded box color unless link is being hovered over */
+    margin-left: 1px;
+    white-space: nowrap;
+	/* [was 105] width of each list item ie menu option - but this affects the child width too unless u specify a diff width in section 'ul li li a' of 150px */
+	width:90px;	
+	text-align:center;
+	text-transform:uppercase;
+	border-radius: 6px; /* was 8 */
+	-moz-border-radius:6px; /* Old Firefox */
+	-webkit-border-radius: 6px; /* Safari and Chrome */
+    -khtml-border-radius: 6px; /* konquerer */
+}
+
+/* hover color used for parent bkg when parent list items are hovered over */
+#menu_nav ul li a:hover {
+	/*background: steelblue;*/
+	background-color:#819FBD;
+}
+
+/* shows the submenu when parent list items are hovered over */
+#menu_nav li:hover ul { /* sub menus have now reappeared ok */
+    display: block;
+    position: absolute;
+}
+
+/*format of secondary menu list items only */
+#menu_nav li:hover li {
+    float: none;
+    font-size: 12px;
+	margin-top: 3px; /* allows some whitespace between vertical list items */
+	margin-left: 0px; /* need this to align sub-menu items with parent-menu */
+}
+
+/* useful if u want to specify a differnt amount of space between the Services parent and the first child item below - this vlaue here is also affected by the padding (or inherited padding) in '#menu_nav li ul' */
+/*
+#menu_nav li:hover li:first-child {
+	margin-top: 0px;
+}
+*/
+
+/* passive ie background hover color eg lightblue or steelblue - #819FBD is blue-grey color - can use diff color for submenu than main menu - but at present sub-menu color also affects top-menu items */
+#menu_nav li:hover a {  
+	background: #819FBD; 
+}
+
+/* active hover color of sub-menu */
+#menu_nav li:hover li a:hover {
+    background: lightgrey;	
+}
+
+#menu_nav ul li li a { /* formatting of secondary menu anchors only > now looking ok since everything is prefaced with #menu_nav  */
+	/* was padding: 5px 10px 5px 10px; */
+	position:relative;
+	padding: 2px 10px 2px 10px;
+	text-align:left;
+	color: #002d62; /* dark blue */
+	/*font-weight:bold;*/
+	text-transform:none;
+	/* width of 2nd level links only  - only need to specify this if u specify length of parent links in section 'ul li a' */
+	width:140px;	
+	/* only need to specify radius here if u want it to be different from parent menu, otherwise it seems to be inherited ok.
+	border-radius: 7px;
+	-moz-border-radius:7px;  Old Firefox 
+	-webkit-border-radius: 7px;
+    -khtml-border-radius: 7px;
+	*/
+}
+
