@@ -1,71 +1,19 @@
-
-/* CSS layout file for Hickey Law website - Patricia Hayden - version 3 - Jan 2013 */
-
 /* ============================================================================================================================
 == CSS styling file for Hickey Law website - Patricia Hayden 
 	version 3: Jan 2013 - Last Updated: 12Jan
-	Lines of code - 755 @ 12jan - 835 lines @ 13Jan - 690 @ 14Jan plus 140 for main_menu
 ** ============================================================================================================================ */
 
-/*----------------------*\
-	CONTENTS
-\*----------------------*/
-/*
-TOC
-LAYOUT
-TYPE etc
-$MAIN
-*/
-
-/*
-NOTES - 
-Standards specify that any given ID name can only be referenced once within a page or document. 
-This makes sense because there are usually only one menu per page, one banner, and usually only one content pane [hence use ids for them not classes].
-Use IDs when there is only one occurence per page. Use classes when there are one or more occurences per page.
-
-More than one class name can be referenced at the same time, in order to add the formatting from each indiv element 
-
-HR orange done
-
-21 Dec - Navigation menu styling mostly done, just needs rounded edges
-
-Jan 2013
-Got rounded corners working in another test file
-Got fade n loop of photos working in another test file with javascript
-
-Got Copperplate and Lucida Sans fonts
-
-Last updated - 4 Jan 2013
-
-NEED TO CHANGE CLASS TO IDs, here and in each html file
-
-*/
-
-/* 	FONTS FAMILIES
-	declare main font family here - used for all main text/content, but also seems to affect all other text 
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
-
-	font family for feature words/titles 
-	font-family: "Copperplate Gothic Bold", Copperplate, serif;
-*/
-	
 html, body {
 	margin:0; 
 	padding:0;
 	border:none;
-	/*background-color:lightblue;*/
 }
 	
-/*
+/* Useful for seeing all the borders around elements 
 div * {
 	border:1px solid yellow;
 }
-
-
-*:not(wrapper) {  // select everything except wrapper element 
-	border:1px solid green; 
-}  
-*/	
+*/
 
 /* ============================================================================================================================
 == HEADER
@@ -73,17 +21,11 @@ div * {
 
 div#header {
     clear: both;  /*  was clear:left; */
-    /*background-image:url("images/lightblue_bkg.jpg");  now that ive got sub elements, the blue bkg is no wlonger showing behind the extra elements */
     border:0px solid red;
     width: 100%;
     height: 70px; /* needed to solve issue of blue bkg not showing properly */
     padding-top:25px;
     padding-bottom:5px;
-	/* font/text properties moved to h1 area 
-	color:darkblue;
-    font-family: "Copperplate Gothic Bold", Copperplate, serif; - including this fonr here makes it look diff than if font name is included as part of h1 
-	font-size:16px;
-	*/
 }
 
 /* PERHAPS DIVS SHOULD NOT REFERENCE FONTS AT ALL? ONLY LAYOUT STUFF EG MARGINS ETC? */
@@ -103,9 +45,6 @@ div#header {
     margin:0px;
 	margin-top:-6px;
     border:0px solid grey;
-	/*
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
-	font-size:15px;*/
 }
 
 /*container for header jpg pic logo itself - making this div.header_logo makes Home word move to new line - why? */
@@ -134,7 +73,6 @@ div#header {
 	
 	#cycler img{
 		position:absolute; 
-		/*background-color:white;*/
 		display:none;
 	}
 
@@ -143,7 +81,6 @@ div#header {
 ** ============================================================================================================================ */
 
 /* ---- PHOTO BANNERS ----- */
-/* NEED TO ADD IN JavaScript code for fade/rotate pics into html file */
 div#photo_banner {
     clear: both;
     border:0px solid pink;
@@ -216,12 +153,6 @@ div#quick_links {
     clear: both;
 	width:100%;
 	margin-right:0px;
-
-	/*height:40px; /* setting height is fine for people/services page, but not good for index page */
-    /*padding-top:25px;
-	margin-bottom:15px; */
-/*	padding-top:40px;*/
-	/*but now this has zero space on people page */
 }
 
 /*main container/wrapper */
@@ -238,7 +169,6 @@ div#wrapper {
 
 div#body_content {
     width: 798px;
-	/*height: 681px; /* width & height of picture, minus 2 pixels to keep inside container with max size 800px wide _ BUT this means any extra text is not visisble! - hence commented height out */
     margin: 0 auto; 
     border:0px solid green;
     overflow: hidden;     /* use this to prevent container collapsing issues, as this  will wrap the container element correctly around the columns (rather than collapsing the container) */
@@ -246,7 +176,6 @@ div#body_content {
 	/* IMP - need to add 20px padding if we end up not-using div.hl_swish, which is only required to get HL logo in bottom right of screen - PLIS need to ensure that div.hl_swish is added to each html page, nested immed after body_content */
 	padding-bottom:0px; /* adds extra blank space (blue bkg) after main content and before footer info, BUT not enought blank space is added onto main index page */
 	background-image:url("images/blue-bkg.jpg"); 	 
-/* light bkg	background-image:url("images/new_blue_bkg.png");  */
 }
 
 /*container for HL logo - must be nested within body_content - but if i change this to #id then extra_padding_bottom suddenly disappears */
@@ -256,7 +185,6 @@ div.hl_swish_logo {
 	border:0px solid purple;
 	overflow: hidden; 
 	padding-bottom:20px;
-/*	background-image:url("images/_new/hickey_logo_swish.gif");*/
 	background-image:url("images/hl_logo_swish.png");
 	background-position:bottom right;
 	background-repeat:no-repeat;
@@ -280,23 +208,16 @@ div#content_right {
     width: 160px;
     border:0px solid grey;
 	margin-top:15px;
-	/*margin-left:20px;
-	margin-right:0px; -margins/padding arent really needed if box is kept at 160px */
-	/*padding-left:20px; //was 20
-	padding-right:0px;*/
 }
 
 div#footer {  /* address and footer info */
     clear: both;
     border:0px solid red;  /* if border is 0 then 0 padding is present ie bkg img is truncated height wise, if border is 1 then bkg img extended to padded areas */
     color:white;
-	/*background-color:steelblue; */
-	/*font-family: "Copperplate Gothic Bold", Copperplate, serif; // was 'copperplate gothic light' */
     width: 798px;       /* was float: left;  clear:left;    */
     height:45px;
     padding-top: 4px;
     padding-bottom: 0px;
-    /*background-image:url("images/img_blue_footer.jpg"); //not needed here as its part of wrapper container */
     margin-left:0px;
 }
 
@@ -325,14 +246,9 @@ div#footer {  /* address and footer info */
 	border:1px solid orange;
 }
 
-/*    <img src="images\img_blue_footer.jpg" alt="xxx" width="508" height="29">  */
-
-
-/* old navigation menu code was here */
-
 
 /* ============================================================================================================================
-== SERVICES SUB-MENU
+== SERVICES SUB-MENU services.html page with buleted
 ** ============================================================================================================================ */
 
 /* SUB-MENU for Services navigation ie navigation container */
@@ -381,12 +297,8 @@ ul.disputes > li a:link,a:visited {
 ul.disputes > li a:hover, a:active {
 	background-color:#a29061; /* gold color #a29061;  - if no color is specified, it inherits blue from main navig */
 	color:#506794; /* or darkgrey? */
-	/*
-	20% of dark blue Home-color
-	color:rgba(0,45,98,0.5); */
 }
 
-/*#menu_nav li:hover li {} */
 /* ============================================================================================================================
 == PARAGRAPH and HEADER FORMATTING
 ** ============================================================================================================================ */
@@ -406,21 +318,12 @@ h1 {
 	border: 0px solid yellow;
 }  
 
-h2 {	/* Subheadings eg Got a Problem? */
+h2 {	/* Subheadings eg 'Got a Problem?' */
   color:#a29061; /*was orange */
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
   font-size:14px;
   margin-left:15px;
   margin-top:0px;
-  /* option to add bottom border only, but still shows gap btwn words and line
-  margin-bottom: 0px;
-  padding-left:10px;
-  padding-bottom: 0px;
-  border-bottom: 1px solid red;
-  */
-  /*image:url("images/orange.jpg");  */
-/*  <img src="images\orange.jpg" width="100%" height="1">   */
-/*  text-decoration: underline;  */
 }
 
 h3 {
@@ -437,21 +340,6 @@ h3 p.p_main:first-child{
 	color:red;
 	margin-top:0px;
 }
-
-
-/* commented out as not being referenced 
-h1.people {
-font-family: "Copperplate Gothic Bold", Copperplate, serif;
-font-size:16px;
-}
-*/
-
-
-/* commented out as not being used
-h1.phone { 
-  color:white;
-}
-*/
 
 p.p_main {   /* but this standard p is now affecting all other paragraphs! */
   color:white;   /* was white - dark blue for light bkg #002d62 */
@@ -493,17 +381,6 @@ p.p_footer > a {
 	text-decoration:none;
 	color:inherit; /* inherit color from parent p eg color_orange */
 }
-
-/*
-p.orange_links > a {
-	text-decoration:none;
-	color: orange;
-}
-p.orange_links {
-	color: orange;
-}
-*/
-
 
 /* classes to easily change the color of text */
 .color_blue {
@@ -550,25 +427,6 @@ p.orange_links {
 	border: 0px solid yellow;
 }
 
-
-/* alternative option, only for links within pfooter, but makes them all orange, excl | diving lines */
-/*
-p.pfooter > a {
-text-decoration:none;
-color: orange;
-}
-*/
-
-/* TEST format for any paragraph text thats not p_main  - NOT currently being referenced*/
-/*
-p.para {  
-  color:lightblue;
-  ffont-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
-  font-size:12px;
-  margin-left:10px;
-}
-*/
-
 /* formatting for secondary/quick links on home page - maybe this text should be centered? */
 p.p_quick_links {  
 	color:#819FBD; /* was lightblue, then #506794 or #b7c9da */
@@ -588,7 +446,7 @@ p.p_quick_links >  a { /* will eventually need to add in a:link, a:visited etc, 
 
 /* How to make 2 child HR elements with diff colours/properties? */
 
-div.hr_orange {   /* whis is this pink considered undefined by ConTEXT ?? */
+div.hr_orange {  
     width: 100%;
     height: 1px;
     border: 0px;
@@ -598,11 +456,6 @@ div.hr_orange {   /* whis is this pink considered undefined by ConTEXT ?? */
     display: block;
 }
 
-/* not being used anymore
-hr {
-  color:orange;
-}
-*/
 
 /* ============================================================================================================================
 == QUOTE FORMATTING
@@ -639,16 +492,6 @@ p.quote_cust_ppl { /* formatting of main 'John made sense' quotes for services p
 	text-align:center;
 	padding:10px 8px 10px 8px;
 }
-
-/* 
-------------------
-OLD QUOTE BOXS - no longer reqd
-            <div class="quote_box">
-            	<p class="quote_cust_ppl">"John made sense of a challenging situation for my wife and I. <br>We can't thank him enough for his dedication and support"</p>
-            <p class="quote_name_ppl">Joe Bloggs</p>
-            </div>
------------------
-*/
 
 .quote_box { /*formatting for quote box with rounded corners - not currently being used? */
 	background-color:#506794 ; /* new light blue brett -  was  809ebb   506794; */
@@ -704,11 +547,6 @@ OLD QUOTE BOXS - no longer reqd
 	bottom: 42px;
 	right:200px; /* was 30% */ 
 	border:2px solid red;
-	
-	/*
-	position:absolute;
-	bottom:32px; // was 38bottom x 29 right - abs keeps img fixed when window is resized, hence not good overall
-	right:250px; */
 }
 
 /* ============================================================================================================================
@@ -757,7 +595,7 @@ p.p_quote {
 	right:-5px;
 }
 
-p.quote_quoter_ppl { /* was verdanan - name of person making quote */
+p.quote_quoter_ppl { /* was verdana - name of person making quote */
 	font-size:9px;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
 	font-style:normal;
@@ -774,7 +612,6 @@ p.quote_quoter_ppl { /* was verdanan - name of person making quote */
 /* ============================================================================================================================
 == NEW QUOTE with picture as background - 16Jan 
 ** ============================================================================================================================ */
-
 
 div.quote_img_small {
 	width:129px;
@@ -942,7 +779,4 @@ p.p_quote_read_more > a:link, a:visited {
 	-ms-transform:translate(-30px, -2px);
 	-o-transform:translate(-30px, -2px);
 	transform:translate(-30px, -2px);
-	
-	
 }
-

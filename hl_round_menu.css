@@ -1,28 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
-
-/*
-body {   
-  background-color:#DDFFFF; - v pale blue 
-}
-
-div * {
-	border:0px solid yellow;
-}
-*/
-
-/* set to full height/width that u want bkg picture to appear at */
-/*
-div.containerB {
-	/*background: url('blue-bkg.jpg'); 
-	background: url('lightblue_bkg.jpg');
-	width: 800px;/* image is now stretched 
-	height: 683px;
-	border: black 1px solid;
-	position:absolute;
-	//margin-left:20px;
-}
-*/
 
 div#menu_nav {
 	z-index:100; /* menu MUST be on top of everything else, including rotating images */
@@ -35,7 +11,6 @@ div#menu_nav {
 
 #menu_nav ul { /* this padding is being inherited by the 2nd ul */
 	z-index:1;
-    /*font-family: Verdana, arial, sans-serif;*/
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Geneva, sans-serif;
     font-size: 14px; /* was 16*/
     margin: 0; /* need these otherwise it looks funny - why? */
@@ -43,10 +18,6 @@ div#menu_nav {
     list-style: none;
 	padding-top:15px; /* 20px also looks good */
     padding-bottom:5px; /* remember to use paddingn and not margin here! */
-	/*margin-top:20px;
-	margin-bottom:0px;*/
-	/*position: relative;
-    display: block; */
 }
 
 #menu_nav ul li {
@@ -137,4 +108,3 @@ div#menu_nav {
     -khtml-border-radius: 7px;
 	*/
 }
-
