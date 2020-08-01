@@ -1,7 +1,0 @@
-sdkjdsklfjsdf
-some random text
-laksjdflasjdfk
-
-new feature one - tidy css
-new feature two - tidy comments
-new feature three - refactor some code
