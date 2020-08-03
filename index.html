@@ -11,6 +11,31 @@
 
 <body>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	    <!-- Javascript & jQuery for doing image fade/transition -->
+	
+	<script type="text/javascript">
+    
+    function cycleImages(){
+          var $active = $('#cycler .active'); //makes $active equal to css id/class
+          var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
+                $next.fadeIn(1000,function(){ //fade IN next image after currently-active one?
+                    $next.delay(800);
+                });
+          $active.fadeOut(1500,function(){ //fade OUT the top image
+                $active.css('z-index',1).removeClass('active'); //reset the z-index and unhide the image
+                $next.delay(500).fadeIn(1500,function(){ //pause 0.5s, fade the next image IN
+                    $(this).addClass('active'); //and when the fade's complete add the active class
+                });
+          });
+        }
+    
+    $(window).load(function(){
+        $('.active').fadeIn(1500); //fade in when everything's loaded
+        // run (ie call function) every 7s
+        setInterval('cycleImages()', 7000);
+    })
+    
+    </script><!-- eof image fade/transition -->
 	
 <div id="wrapper">
 
@@ -123,31 +148,5 @@
 
 </div> <!-- end of wrapper div -->
 </body>
-
-    <!-- Javascript & jQuery for doing image fade/transition -->
-	
-	<script type="text/javascript">
-    
-    function cycleImages(){
-          var $active = $('#cycler .active'); //makes $active equal to css id/class
-          var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
-                $next.fadeIn(1000,function(){ //fade IN next image after currently-active one?
-                    $next.delay(800);
-                });
-          $active.fadeOut(1500,function(){ //fade OUT the top image
-                $active.css('z-index',1).removeClass('active'); //reset the z-index and unhide the image
-                $next.delay(500).fadeIn(1500,function(){ //pause 0.5s, fade the next image IN
-                    $(this).addClass('active'); //and when the fade's complete add the active class
-                });
-          });
-        }
-    
-    $(window).load(function(){
-        $('.active').fadeIn(1500); //fade in when everything's loaded
-        // run (ie call function) every 7s
-        setInterval('cycleImages()', 7000);
-    })
-    
-    </script><!-- eof image fade/transition -->
     
 </html>
